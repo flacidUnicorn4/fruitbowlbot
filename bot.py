@@ -3,7 +3,7 @@ import datetime
 import os
 from discord.ext import commands
 
-bot = commands.Bot(description="lol", command_prefix="!")
+bot = commands.Bot(description="Hey! I'm Fruitbowl's personal bot! Use me at any time by using my !", command_prefix="!")
 
 time = datetime.datetime.utcnow()
 
