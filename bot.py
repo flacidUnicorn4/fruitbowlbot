@@ -32,4 +32,4 @@ async def conan(ctx):
 async def ror(ctx):
     await ctx.send("""- Reign of Kings -\nRp or PvP - Which will you choose?\nSimply search for "FruitBowl" on community servers and decide""")
 
-bot.run(os.environ["TOKEN"])
+bot.run("TOKEN")
