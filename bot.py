@@ -1,5 +1,6 @@
 import discord
 import datetime
+import os
 from discord.ext import commands
 
 bot = commands.Bot(description="lol", command_prefix="!")
@@ -32,4 +33,4 @@ async def conan(ctx):
 async def rok(ctx):
     await ctx.send("""- Reign of Kings -\nRp or PvP - Which will you choose?\nSimply search for "FruitBowl" on community servers and decide""")
 
-bot.run("TOKEN")
+bot.run(os.getenv('TOKEN'))
