@@ -9,7 +9,9 @@ time = datetime.datetime.utcnow()
 
 
 @bot.command()
-async def clock(ctx):
+async def time(ctx):
+    "This command tells you the time in GMT"
+
     embed = discord.Embed(title="GMT Date and time", description=" ")
     embed.add_field(name="Date", value=f"{time.date()}")
     embed.add_field(name="time", value=f"{time.time().strftime('%H:%M:%S')}")
@@ -26,11 +28,13 @@ async def update(ctx, content):
 
 @bot.command()
 async def conan(ctx):
+    "Conan Exiles server IP"
     await ctx.send("- Conan Exiles -\nJoin our world today and start your own adventure!\nIP:  185.44.78.61:7877")
 
 
 @bot.command()
 async def rok(ctx):
+    "Reign of Kings server IP"
     await ctx.send("""- Reign of Kings -\nRp or PvP - Which will you choose?\nSimply search for "FruitBowl" on community servers and decide""")
 
 bot.run(os.getenv('TOKEN'))
