@@ -6,6 +6,10 @@ from discord.ext import commands
 bot = commands.Bot(description="Hey! I'm Fruitbowl's personal bot! Use me at any time by using ! ", command_prefix="!")
 
 time = datetime.datetime.utcnow()
+@bot.event
+async def on_ready():
+ await bot.change_presence (game= discord.Streaming(name="help via !help", url="www.twitch.tv/blablabla"))
+
 
 
 @bot.command()
