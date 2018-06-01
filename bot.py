@@ -35,7 +35,7 @@ async def conan(ctx):
 
 @bot.command()
 async def rok(ctx):
-    ">Reign of Kings server IP"
+    "> Reign of Kings server IP"
     await ctx.send("""- Reign of Kings -\nRp or PvP - Which will you choose?\nSimply search for "FruitBowl" on community servers and decide""")
 
 bot.run(os.getenv('TOKEN'))
