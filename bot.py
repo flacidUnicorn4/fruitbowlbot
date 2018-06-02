@@ -5,11 +5,10 @@ from discord.ext import commands
 
 bot = commands.Bot(description="Hey! I'm Fruitbowl's personal bot! Use me at any time by using ! ", command_prefix="!")
 
-time = datetime.datetime.utcnow()
-
+t= datetime.datetime.utcnow()
 @bot.event
 async def on_ready():
- await bot.change_presence(activity= discord.Streaming(name="help via !help", url="https://.twitch.tv/blablabla"))
+ await bot.change_presence (activity= discord.Streaming(name="help via !help", url="www.twitch.tv/blablabla"))
 
 
 
@@ -18,8 +17,8 @@ async def time(ctx):
     "> This command tells you the time in GMT"
 
     embed = discord.Embed(title="GMT Date and time", description=" ")
-    embed.add_field(name="Date", value=f"{time.date()}")
-    embed.add_field(name="time", value=f"{time.time().strftime('%H:%M:%S')}")
+    embed.add_field(name="Date", value=f"{t.date()}")
+    embed.add_field(name="time", value=f"{t.time().strftime('%H:%M:%S')}")
     await ctx.send(embed=embed)
 
 
