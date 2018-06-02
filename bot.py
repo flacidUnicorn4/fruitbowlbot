@@ -8,7 +8,7 @@ bot = commands.Bot(description="Hey! I'm Fruitbowl's personal bot! Use me at any
 t= datetime.datetime.utcnow()
 @bot.event
 async def on_ready():
- await bot.change_presence (activity= discord.Streaming(name="help via !help", url="www.twitch.tv/blablabla"))
+ await bot.change_presence(activity= discord.Streaming(name="help via !help", url="https://.twitch.tv/blablabla"))
 
 
 
