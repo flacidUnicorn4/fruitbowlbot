@@ -17,7 +17,7 @@ async def on_ready():
 async def time(ctx):
     "> This command tells you the time in GMT"
 
-    embed = discord.Embed(title="GMT Date and time", description=" ")
+    embed = discord.Embed(title="GMT Date and time", description=" ", colour=discord.Colour.dark_purple())
     embed.add_field(name="Date", value=f"{t.date()}")
     embed.add_field(name="time", value=f"{t.time().strftime('%H:%M:%S')}")
     await ctx.send(embed=embed)
