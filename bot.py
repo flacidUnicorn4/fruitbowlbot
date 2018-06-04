@@ -29,7 +29,10 @@ async def update(ctx, content):
     "> Staff only command - Used to update everyone"
     for i in ctx.guild.members:
         if not i.bot:
+         try:
             await i.send(f'{content}')
+         except:
+            return 
 
 
 @bot.command()
