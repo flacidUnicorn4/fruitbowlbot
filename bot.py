@@ -16,7 +16,7 @@ async def on_ready():
 @bot.command()
 async def time(ctx):
     "> This command tells you the time in GMT"
-   t= datetime.datetime.utcnow()
+    t= datetime.datetime.utcnow()
 
     embed = discord.Embed(title="GMT Date and Time", description=" ", colour=discord.Colour.dark_purple())
     embed.add_field(name="Date", value=f"{t.date()}")
