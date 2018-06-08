@@ -33,7 +33,7 @@ async def update(ctx, content):
          try:
             await i.send(f'{content}')
          except:
-            return 
+            pass 
 
 
 @bot.command()
