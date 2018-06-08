@@ -20,7 +20,7 @@ async def time(ctx):
 
     embed = discord.Embed(title="GMT Date and Time", description=" ", colour=discord.Colour.dark_purple())
     embed.add_field(name="Date", value=f"{t.date()}")
-    embed.add_field(name="Time", value=f"{t.time().strftime('%H:%M:%S')}")
+    embed.add_field(name="Time", value=f"{(t.time()+timedelta(hours=1)).strftime('%H:%M:%S')}")
     await ctx.send(embed=embed)
     
 
