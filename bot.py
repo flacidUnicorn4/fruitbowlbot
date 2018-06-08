@@ -12,7 +12,6 @@ async def on_ready():
  await bot.change_presence(activity= discord.Streaming(name="help via !help", url="https://.twitch.tv/blablabla"))
 
 
-
 @bot.command()
 async def time(ctx):
     "> This command tells you the time in GMT"
@@ -20,7 +19,7 @@ async def time(ctx):
 
     embed = discord.Embed(title="GMT Date and Time", description=" ", colour=discord.Colour.dark_purple())
     embed.add_field(name="Date", value=f"{t.date()}")
-    embed.add_field(name="Time", value=f"{(t.time()+timedelta(hours=1)).strftime('%H:%M:%S')}")
+    embed.add_field(name="Time", value=f"{(t.time()+datetime.datetime.timedelta(hours=1)).strftime('%H:%M:%S')}")
     await ctx.send(embed=embed)
     
 
