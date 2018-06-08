@@ -1,5 +1,5 @@
 import discord
-import datetime
+from datetime import datetime, timedelta
 import os
 from discord.ext import commands
 
@@ -15,11 +15,10 @@ async def on_ready():
 @bot.command()
 async def time(ctx):
     "> This command tells you the time in GMT"
-    t= datetime.datetime.utcnow()
 
     embed = discord.Embed(title="GMT Date and Time", description=" ", colour=discord.Colour.dark_purple())
-    embed.add_field(name="Date", value=f"{t.date()}")
-    embed.add_field(name="Time", value=f"{(t.time()+datetime.timedelta(hours=1)).strftime('%H:%M:%S')}")
+    embed.add_field(name="Date", value=f"{datetime.utcnow().date()}")
+    embed.add_field(name="Time", value=f"{(datetime.utcnow()+timedelta(hours=1)).strftime('%H:%M:%S')}")
     await ctx.send(embed=embed)
     
 
