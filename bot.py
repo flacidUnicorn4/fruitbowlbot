@@ -5,7 +5,7 @@ from discord.ext import commands
 
 bot = commands.Bot(description="Hey! I'm Fruitbowl's personal bot! Use me at any time by using ! ", command_prefix="!")
 
-t= datetime.datetime.utcnow()
+
 
 @bot.event
 async def on_ready():
@@ -21,6 +21,8 @@ async def time(ctx):
     embed.add_field(name="Date", value=f"{t.date()}")
     embed.add_field(name="Time", value=f"{t.time().strftime('%H:%M:%S')}")
     await ctx.send(embed=embed)
+    t= datetime.datetime.utcnow()
+
 
 
 @bot.command()
